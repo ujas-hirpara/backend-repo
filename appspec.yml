@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /mnt/datastore/nodeuser/panel_api_v2
+    destination: /backend-repo
     overwrite: true
 hooks:
   # BeforeInstall:
@@ -18,7 +18,7 @@ hooks:
   #     timeout: 300
   #     runas: root
   ApplicationStart:
-    - location: scripts/applicationStart.sh
+    - location: start.sh
       timeout: 3000
       runas: root
   
